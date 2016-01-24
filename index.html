@@ -12,10 +12,13 @@
       margin: 1px;
     }
 
+    body {
+      font-family: 'Century Gothic', CenturyGothic, AppleGothic, Tahoma, Verdana, Segoe, sans-serif;
+    }
+
     @media screen {
       body {
         background-color: #d0d0d0;
-        font-family: 'Century Gothic', CenturyGothic, AppleGothic, Tahoma, Verdana, Segoe, sans-serif;
       }
 
       .wrap {
@@ -33,18 +36,40 @@
       }
     }
 
+    @page {
+      widows: 10;
+      orphans: 10;
+
+      /* this affects the margin in the printer settings */
+      margin: 25mm 25mm 25mm 25mm;
+    }
+
     @media print {
+
       body {
         background-color: #fff;
-        font-family: 'Century Gothic', CenturyGothic, AppleGothic, Tahoma, Verdana, Segoe, sans-serif;
+      }
+
+      div.bibbase_paper {
+        page-break-inside: avoid;
+        widows: 3;
+        orphans: 3;
       }
 
       .wrap {
         background-color: #ffffff;
-        margin: 10px;
-        padding: 10px;
+        margin: 0mm;
+        padding: 0mm;
       }
+
+      a:link, a:visited { color: #000; }
+      hr { color: transparent; }
+      .noprint { display: none; }
+
+      p, h2, h3 { orphans: 3; widows: 3; }
+      h2, h3 { page-break-after: avoid; }
     }
+
     </style>
   </HEAD>
 
@@ -61,6 +86,8 @@
           </div>
         </div>
 
+        <!-- ....................................................... -->
+
         <div class="row">
           <div class="eight wide right floated column expertise">
 
@@ -68,6 +95,7 @@
               <div class="item">
                 <div class="content">
                   <div class="header">Hacking Expertise</div>
+                  <br/>
                   <a href="http://stackoverflow.com/search?q=user:1087119+[meteor]" class="ui tiny label">
                     meteor
                   </a>
@@ -89,9 +117,12 @@
                 </div>
               </div>
 
+              <br/>
               <div class="item">
+                <br/>
                 <div class="content">
                   <div class="header">Research Expertise</div>
+                  <br/>
 
                   <div class="ui tiny label"> planning </div>
                   <div class="ui tiny label"> execution monitoring </div>
@@ -103,6 +134,8 @@
               </div>
             </div>
           </div>
+
+          <!-- ................... -->
 
           <div class="eight wide column" style="font-size: small">
             <!-- <a href="http://www.parc.com/cfritz">www.parc.com/cfritz</a> -->
@@ -162,11 +195,40 @@
         </div>
       </div>
 
+      <!-- ....................................................... -->
 
       <div class="row">
-        <div class="twelve wide column">
+        <div class="sixteen wide column">
+
+          I describe myself as a full-stack artificial intelligence (AI)
+          research developer and tech lead. This means that I do not only have a
+          very broad understanding of the theory in AI, but also have the
+          experience and passion to build things in a team. I am experienced
+          leading teams of both researchers and software engineers and know how
+          to develop anywhere along the stack. Even though my driver is this
+          desire to develop real things and not just theories, I also acquired a
+          very principled academic education in logic-based knowledge
+          representation for dynamical systems with specific application to AI
+          planning and execution monitoring. I chose this thesis topic after my
+          previous, frustrating experience trying to make real robots score
+          goals in robotic soccer.
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="sixteen wide column">
+
+
+
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="sixteen wide column">
           <h3>Publications</h3>
-          <!-- <script src="http://bibbase.org/show?bib=http://www.cs.toronto.edu/~fritz/publications/list.bib&jsonp=1"></script> -->
+          <script src="http://bibbase.org/show?bib=http://www.cs.toronto.edu/~fritz/publications/list.bib&jsonp=1"></script>
         </div>
       </div>
     </div>
