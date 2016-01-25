@@ -50,8 +50,6 @@
     }
 
     @page {
-      widows: 10;
-      orphans: 10;
 
       /* this affects the margin in the printer settings */
       margin: 25mm 25mm 25mm 25mm;
@@ -63,16 +61,22 @@
         background-color: #fff;
       }
 
+      div.bibbase_group {
+        page-break-inside: avoid;
+      }
+
       div.bibbase_paper {
         page-break-inside: avoid;
-        widows: 3;
-        orphans: 3;
       }
 
       .wrap {
         background-color: #ffffff;
         margin: 0mm;
         padding: 0mm;
+      }
+
+      .ui.grid>.row>.column {
+        display: block;
       }
 
       a:link, a:visited { color: #000; }
@@ -86,9 +90,10 @@
     </style>
   </HEAD>
 
+
   <BODY>
     <div class="wrap">
-      <div class="ui one column doubling stackable grid container">
+      <div class="ui doubling stackable grid container">
 
         <div class="row">
           <div class="sixteen wide column">
@@ -102,54 +107,6 @@
         <!-- ....................................................... -->
 
         <div class="row">
-          <div class="eight wide right floated column expertise">
-
-            <div class="ui middle aligned divided list">
-              <div class="item">
-                <div class="content">
-                  <div class="header">Hacking Expertise</div>
-                  <br/>
-                  <a href="http://stackoverflow.com/search?q=user:1087119+[meteor]" class="ui tiny label">
-                    meteor
-                  </a>
-
-                  <a href="http://stackoverflow.com/search?q=user:1087119+[javascript]" class="ui tiny label">
-                    javascript
-                  </a>
-
-                  <a href="http://stackoverflow.com/search?q=user:1087119+[nodejs]" class="ui tiny label">
-                    nodejs
-                  </a>
-
-                  <div class="ui tiny label"> html </div>
-                  <div class="ui tiny label"> css </div>
-
-                  <div class="ui tiny label"> c/c++ </div>
-                  <div class="ui tiny label"> python </div>
-                  <div class="ui tiny label"> prolog </div>
-                </div>
-              </div>
-
-              <br/>
-              <div class="item">
-                <br/>
-                <div class="content">
-                  <div class="header">Research Expertise</div>
-                  <br/>
-
-                  <div class="ui tiny label"> planning </div>
-                  <div class="ui tiny label"> execution monitoring </div>
-                  <div class="ui tiny label"> GOLOG </div>
-                  <div class="ui tiny label"> knowledge representation </div>
-                  <div class="ui tiny label"> user preferences </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ................... -->
-
           <div class="eight wide column" style="font-size: small">
             <!-- <a href="http://www.parc.com/cfritz">www.parc.com/cfritz</a> -->
 
@@ -202,15 +159,48 @@
                   <a href="http://stackoverflow.com/users/1087119/christian-fritz">stackoverflow.com/users/1087119/christian-fritz</a>
                 </div>
               </div>
-            </ul>
+            </div>
           </div>
 
+          <!-- ................... -->
+
+          <div class="eight wide column expertise">
+
+            <div class="ui horizontal divider header tiny" style="font-size: smaller">
+              <i class="code icon"></i>
+              Programming Background
+            </div>
+            <a href="http://stackoverflow.com/search?q=user:1087119+[meteor]" class="ui tiny label">
+              meteor
+            </a>
+            <a href="http://stackoverflow.com/search?q=user:1087119+[javascript]" class="ui tiny label">
+              javascript
+            </a>
+            <a href="http://stackoverflow.com/search?q=user:1087119+[nodejs]" class="ui tiny label">
+              nodejs
+            </a>
+            <div class="ui tiny label"> html </div>
+            <div class="ui tiny label"> css </div>
+            <div class="ui tiny label"> c/c++ </div>
+            <div class="ui tiny label"> python </div>
+            <div class="ui tiny label"> prolog </div>
+
+            <div class="ui horizontal divider header tiny" style="font-size: smaller">
+              <i class="student icon"></i>
+              Research Background
+            </div>
+            <div class="ui tiny label"> planning </div>
+            <div class="ui tiny label"> execution monitoring </div>
+            <div class="ui tiny label"> GOLOG </div>
+            <div class="ui tiny label"> knowledge representation </div>
+            <div class="ui tiny label"> user preferences </div>
+          </div>
         </div>
       </div>
 
       <!-- ....................................................... -->
 
-      <div class="row">
+      <div class="row" style="margin-top: 1em">
         <div class="sixteen wide column">
 
           I describe myself as a full-stack artificial intelligence (AI)
@@ -245,5 +235,6 @@
         </div>
       </div>
     </div>
+  </div>
   </BODY>
 </HTML>
