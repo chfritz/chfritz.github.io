@@ -6,13 +6,13 @@ body {
   font-family: 'Century Gothic', CenturyGothic, AppleGothic, Tahoma, Verdana, Segoe, sans-serif;
 }
 
-.row {
-  margin-top: 3em;
-}
-
 @media screen {
   body {
-    background-color: #d0d0d0;
+    background-color: rgb(217, 217, 217) !important;
+  }
+
+  .row {
+    margin-top: 3em;
   }
 
   .wrap {
@@ -45,10 +45,12 @@ body {
     background-color: #fff;
   }
 
+  .row {
+    margin-top: 2em;
+  }
+
   div.bibbase_paper {
-    orphans: 3;
-    widows: 3;
-    page-break-inside: avoid;
+    page-break-inside: avoid !important;
   }
 
   .wrap {
