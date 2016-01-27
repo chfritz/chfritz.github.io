@@ -18,13 +18,18 @@ body {
 }*/
 
 img.logo {
-  width: 3.5em;
+  width: 50%;
+  min-width: 3em;
   height: auto;
   margin-top: 0.5em;
 }
 
-.experience .row {
+.row.job.title {
   margin-top: 0.5em;
+}
+
+.row.job.description {
+  padding: 10px;
 }
 
 /* ------------------------------------------------- */

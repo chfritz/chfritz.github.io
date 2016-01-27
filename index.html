@@ -60,14 +60,16 @@
 
   {{> job image="uoft.png"
   title="Ph.D., Computer Science"
-  description="University of Toronto, Canada. Thesis title: \"Monitoring the Generation and Execution of Optimal Plans\". Advisor: Prof. Sheila McIlraith, Knowledge Representation Group."
+  place="University of Toronto, Toronto, Ontario, Canada"
+  description="Thesis title: \"Monitoring the Generation and Execution of Optimal Plans\". Advisor: Prof. Sheila McIlraith, Knowledge Representation Group."
   from="September 2004"
   to="April 2009" }}
 
 
-  {{> job image="rwth.png"
+  {{> job image="rwth.jpg"
   title="M.Sc., Computer Science"
-  description="RWTH Aachen University, Germany. Thesis title: \"Integrating Decision-Theoretic Planning and Programming for Robot Control in Highly Dynamic Domains\". Advisor: Prof. Gerhard Lakemeyer, Knowledge Based Systems Group. Including: • Business Administration minor. Specialization: Technology and Innovation Management. • Study abroad at Universidad Complutense Madrid, Spain, 2000/2001."
+  place="RWTH Aachen University, Aachen, Germany"
+  description="Thesis title: \"Integrating Decision-Theoretic Planning and Programming for Robot Control in Highly Dynamic Domains\". Advisor: Prof. Gerhard Lakemeyer, Knowledge Based Systems Group. Including: • Business Administration minor. Specialization: Technology and Innovation Management. • Study abroad at Universidad Complutense Madrid, Spain, 2000/2001."
   from="September 1998"
   to="November 2003" }}
 </template>
@@ -79,25 +81,29 @@
 
   {{> job image="parc.png"
   title="Area Manager, \"Representation and Planning\""
-  description="Systems Science Lab, Palo Alto Research Center, Palo Alto, CA"
+  place="Systems Science Lab, Palo Alto Research Center, Palo Alto, CA"
+  description=""
   from="August 2014"
   to="Present" }}
 
   {{> job image="bibbase.png"
   title="Founder and CEO"
-  description="BibBase"
+  place="BibBase"
+  description=""
   from="2005"
   to="Present" }}
 
   {{> job image="parc.png"
   title="Research Scientist"
-  description="Intelligent Systems Lab, Palo Alto Research Center, Palo Alto, CA"
+  place="Intelligent Systems Lab, Palo Alto Research Center, Palo Alto, CA"
+  description=""
   from="October 2010"
   to="July 2014" }}
 
   {{> job image="isi.png"
   title="Post Doctoral Research Associate"
-  description="Information Sciences Institute, University of Southern California, Marina del Rey, CA"
+  place="Information Sciences Institute, University of Southern California, Marina del Rey, CA"
+  description=""
   from="May 2009"
   to="September 2010" }}
 </template>
@@ -154,25 +160,30 @@
 <!-- ................................ -->
 
 <template name="job">
-  <div class="row">
-    <div class="col-sm-1">
-      <img class="logo" src="images/{{image}}">
-    </div>
-    <div class="col-sm-6">
+  <div class="row job title">
+    <div class="col-xs-9">
       <h4 class="ui header">
         <div class="content">
           {{title}}
           <div class="sub header">
-            {{description}}
+            {{place}}<br/>
+            {{from}} &mdash; {{to}}
           </div>
         </div>
       </h4>
     </div>
-
-    <div class="col-sm-5" style="text-align: right;">
-      {{from}} &mdash; {{to}}
+    <div class="col-xs-3" style="text-align: right;">
+      <img class="logo" src="images/{{image}}">
     </div>
   </div>
+
+  {{#if description}}
+  <div class="row job description">
+    <div class="col-sm-12">
+      {{description}}
+    </div>
+  </div>
+  {{/if}}
 </template>
 
 <!-- ................................ -->
@@ -224,7 +235,7 @@
 
     <!-- ....................................................... -->
 
-    <div class="row">
+    <div class="row education">
       <div class="col-md-12">
         {{> education}}
       </div>
