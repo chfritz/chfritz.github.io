@@ -4,7 +4,7 @@
 
 body {
   font-family: 'Century Gothic', CenturyGothic,
-  AppleGothic, Tahoma, Verdana, Segoe, sans-serif;
+  AppleGothic, Tahoma, Verdana, Segoe, sans-serif !important;
 }
 
 .ui.horizontal.divider {
