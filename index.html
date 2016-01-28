@@ -79,34 +79,24 @@
 <template name="experience">
   <h3>Experience</h3>
 
-  {{> job image="parc.png"
-  title="Area Manager, \"Representation and Planning\""
-  place="Systems Science Lab, Palo Alto Research Center, Palo Alto, CA"
-  description=""
-  from="August 2014"
-  to="Present" }}
+  {{#each jobs}}
+  {{> job}}
+  {{/each}}
 
-  {{> job image="bibbase.png"
-  title="Founder and CEO"
-  place="BibBase"
-  description=""
-  from="2005"
-  to="Present" }}
-
-  {{> job image="parc.png"
-  title="Research Scientist"
-  place="Intelligent Systems Lab, Palo Alto Research Center, Palo Alto, CA"
-  description=""
-  from="October 2010"
-  to="July 2014" }}
-
-  {{> job image="isi.png"
-  title="Post Doctoral Research Associate"
-  place="Information Sciences Institute, University of Southern California, Marina del Rey, CA"
-  description=""
-  from="May 2009"
-  to="September 2010" }}
 </template>
+
+<div class="data" id="job-ra-aachen">
+
+  In this position I supervised and participated in the development of the robot
+  control software deployed on our soccer robots that competed in the RoboCup
+  Mid-Size league. Our team competed at the RoboCup World Cup in Padua in 2003
+  and in Lisbon in 2004 as well as in the German Opens in 2002, 2003, and 2004.
+
+  In this position I also supervised seminar courses. This included advising and
+  grading students on written and orally-presented summaries of papers selected
+  from current topics in the field of artificial intelligence.
+
+</div>
 
 <!-- ................................ -->
 
@@ -172,9 +162,11 @@
         </div>
       </h4>
     </div>
+    {{#if image}}
     <div class="col-xs-3" style="text-align: right;">
       <img class="logo" src="images/{{image}}">
     </div>
+    {{/if}}
   </div>
 
   {{#if description}}
@@ -255,6 +247,15 @@
     <div class="row">
       <div class="col-md-12">
         <h3>Patents</h3>
+
+      </div>
+    </div>
+
+    <!-- ....................................................... -->
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Scholarships and Awards</h3>
 
       </div>
     </div>

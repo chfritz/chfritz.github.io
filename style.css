@@ -21,16 +21,21 @@ img.logo {
   width: 50%;
   min-width: 3em;
   height: auto;
-  margin-top: 0.5em;
 }
 
 .row.job.title {
-  margin-top: 0.5em;
+  margin-top: 1em;
 }
 
 .row.job.description {
-  padding: 10px;
+  padding: 0.2em 0em 0em 1em;
 }
+
+.data {
+  visibility: hidden;
+  display: none;
+}
+
 
 /* ------------------------------------------------- */
 
