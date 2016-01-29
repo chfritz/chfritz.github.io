@@ -15,7 +15,7 @@ Template.experience.helpers({
         image: "parc.png",
         title: "Area Manager, \"Representation and Planning\"",
         place: "Systems Science Lab, Palo Alto Research Center, Palo Alto, CA",
-        description: "",
+        description: get("job-am-parc"),
         from: "August 2014",
         to: "Present"
       }, {
