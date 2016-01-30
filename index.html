@@ -56,7 +56,6 @@
 <!-- ................................ -->
 
 <template name="education">
-  <h3>Education</h3>
 
   {{> job image="uoft.png"
   title="Ph.D., Computer Science"
@@ -77,12 +76,9 @@
 <!-- ................................ -->
 
 <template name="experience">
-  <h3>Experience</h3>
-
   {{#each jobs}}
   {{> job}}
   {{/each}}
-
 </template>
 
 <div class="data" id="job-am-parc">
@@ -235,6 +231,15 @@
 <template name="publications">
 </template>
 
+<!-- ................................ -->
+
+<template name="section">
+  <!-- <h3 class="ui horizontal divider header">
+    {{title}}
+  </h3> -->
+  <div class="ui divider"></div>
+  <h3>{{title}}</h3>
+</template>
 
 <!-- ................................ -->
 
@@ -242,7 +247,7 @@
   <div class="wrap">
     <div class="row">
       <div class="col-md-12">
-        <h2>Christian Fritz</h2>
+        <h1>Christian Fritz</h1>
         Palo Alto Research Center &mdash;
         3333 Coyote Hill Rd &mdash;
         Palo Alto, CA 94304, USA
@@ -273,6 +278,7 @@
 
     <div class="row experience">
       <div class="col-sm-12">
+        {{> section title="Experience"}}
         {{> experience }}
       </div>
     </div>
@@ -281,6 +287,7 @@
 
     <div class="row education">
       <div class="col-md-12">
+        {{> section title="Education"}}
         {{> education}}
       </div>
     </div>
@@ -289,7 +296,7 @@
 
     <div class="row">
       <div class="col-md-12">
-        <h3>Publications</h3>
+        {{> section title="Publications"}}
         <!-- <script src="http://bibbase.org/show?bib=http://www.cs.toronto.edu/~fritz/publications/list.bib&jsonp=1"></script> -->
       </div>
     </div>
@@ -298,14 +305,14 @@
 
     <div class="row">
       <div class="col-md-12">
-        <h3>Patents</h3>
+        {{> section title="Patents"}}
 
       </div>
     </div>
     <!-- ....................................................... -->
     <div class="row">
       <div class="col-md-12">
-        <h3>Scholarships and Awards</h3>
+        {{> section title="Scholarships and Awards"}}
 
         <ul>
 
@@ -338,7 +345,7 @@
     <!-- ....................................................... -->
     <div class="row">
       <div class="col-md-12">
-        <h3>Teaching and Student Supervision</h3>
+        {{> section title="Teaching and Student Supervision"}}
         <ul>
           <li>Teaching Assistant, “Programming on the Web” (CSC 309, University of Toronto).<br/>
             Summer 2007.
@@ -367,7 +374,7 @@
     <!-- ....................................................... -->
     <div class="row">
       <div class="col-md-12">
-        <h3>Academic Service</h3>
+        {{> section title="Academic Service"}}
 
         I have co-organized the following workshop:
         <ul>
@@ -412,7 +419,7 @@
     <!-- ....................................................... -->
     <div class="row">
       <div class="col-md-12">
-        <h3>Skills</h3>
+        {{> section title="Skills"}}
         <ul>
 
           <li>Experienced team worker, programmer, and player.</li>
@@ -428,7 +435,7 @@
     <!-- ....................................................... -->
     <div class="row">
       <div class="col-md-12">
-        <h3>Portfolio</h3>
+        {{> section title="Portfolio"}}
         <ul>
           <li class="item">
             <a href="http://bibbase.org">BibBase</a>
