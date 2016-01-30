@@ -22,24 +22,25 @@ Template.experience.helpers({
         image: "bibbase.png",
         title: "Founder and CEO",
         place: "BibBase",
-        description: "",
+        description: get("job-bibbase"),
         from: "2005",
         to: "Present",
       }, {
         image: "parc.png",
         title: "Research Scientist",
         place: "Intelligent Systems Lab, Palo Alto Research Center, Palo Alto, CA",
-        description: "",
+        description: get("job-mrs-parc"),
         from: "October 2010",
         to: "July 2014"
       },{
         image: "isi.png",
         title: "Post Doctoral Research Associate",
         place: "Information Sciences Institute, University of Southern California, Marina del Rey, CA",
-        description: "",
+        description: get("job-isi"),
         from: "May 2009",
         to: "September 2010"
       }, {
+        image: "bell-labs.jpg",
         title: "Summer Intern",
         place: "Alcatel-Lucent Bell Labs, Murray Hill, NJ",
         description: "",
@@ -53,6 +54,7 @@ Template.experience.helpers({
         from: "November 2001",
         to: "July 2004"
       },{
+        image: "sap.png",
         title: "Summer Intern",
         place: "SAP, Walldorf, Germany",
         description: "",
