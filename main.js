@@ -8,6 +8,29 @@ function get(name) {
   return $('.data#'+name)[0].innerHTML;
 }
 
+Template.education.helpers({
+  education: function() {
+    return [
+      {
+        image: "uoft.png",
+        title: "Ph.D., Computer Science",
+        place: "University of Toronto, Toronto, Ontario, Canada",
+        description: get("edu-uoft"),
+        from: "September 2004",
+        to: "April 2009",
+      },
+      {
+        image: "rwth.jpg",
+        title: "M.Sc., Computer Science (major) + Business Administration (minor)",
+        place: "RWTH Aachen University, Aachen, Germany",
+        description: get("edu-rwth"),
+        from: "September 1998",
+        to: "November 2003"
+      }
+    ];
+  }
+});
+
 Template.experience.helpers({
   jobs: function() {
     return [

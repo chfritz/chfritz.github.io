@@ -57,21 +57,33 @@
 
 <template name="education">
 
-  {{> job image="uoft.png"
-  title="Ph.D., Computer Science"
-  place="University of Toronto, Toronto, Ontario, Canada"
-  description="Thesis title: \"Monitoring the Generation and Execution of Optimal Plans\". Advisor: Prof. Sheila McIlraith, Knowledge Representation Group."
-  from="September 2004"
-  to="April 2009" }}
+  {{#each education}}
+  {{> job}}
+  {{/each}}
 
-
-  {{> job image="rwth.jpg"
-  title="M.Sc., Computer Science"
-  place="RWTH Aachen University, Aachen, Germany"
-  description="Thesis title: \"Integrating Decision-Theoretic Planning and Programming for Robot Control in Highly Dynamic Domains\". Advisor: Prof. Gerhard Lakemeyer, Knowledge Based Systems Group. Including: • Business Administration minor. Specialization: Technology and Innovation Management. • Study abroad at Universidad Complutense Madrid, Spain, 2000/2001."
-  from="September 1998"
-  to="November 2003" }}
 </template>
+
+<div class="data" id="edu-uoft">
+  Thesis: <i>"Monitoring the Generation and Execution of Optimal Plans"</i>.
+  Advisor: Prof. Sheila McIlraith, Cognitive Robotics Group.
+</div>
+
+<div class="data" id="edu-rwth">
+
+  Thesis: <i>"Integrating Decision-Theoretic Planning and Programming for Robot
+    Control in Highly Dynamic Domains"
+  </i>. Advisor: Prof. Gerhard Lakemeyer, Knowledge Based Systems Group
+  <br/>
+  Includes:
+  <ul>
+    <li>Minor: Business Administration with specialization in
+      "Technology and Innovation Management".
+    </li>
+    <li>
+      Study abroad at Universidad Complutense Madrid, Spain, 2000/2001.
+    </li>
+  </ul>
+</div>
 
 <!-- ................................ -->
 
