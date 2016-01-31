@@ -119,7 +119,7 @@ img.logo {
   widows: 3;
 
   /* this affects the margin in the printer settings */
-  margin: 25mm 25mm 25mm 25mm;
+  margin: 0mm;
 }
 
 @media print {
@@ -138,7 +138,7 @@ img.logo {
 
   .wrap {
     background-color: #ffffff;
-    margin: 0mm;
+    margin: 10%;
     padding: 0mm;
   }
 
