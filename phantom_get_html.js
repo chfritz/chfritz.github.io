@@ -1,14 +1,17 @@
-var width = 1024;
-var height = 768;
 var webpage = require('webpage');
 
 page = webpage.create();
-page.viewportSize = {width: width, height: height};
-page.open('http://localhost:3000', function(status) {
+page.open('blaze.html', function(status) {
     window.setTimeout(function() {
         var content = page.content;
-        console.log(content);
-        page.clipRect = {top: 0, left: 0, width: width, height: height};
+        var bodyStart = content.indexOf("<body>");
+        console.log(
+          // don't replace myscript with script in head, because there
+          // it appears inside another script tag
+          content.slice(0, bodyStart),
+          // but do so in the body
+          content.slice(bodyStart).replace(/myscript/g, "script")
+        );
         phantom.exit();
-      }, 2000);
+      }, 1000);
   });

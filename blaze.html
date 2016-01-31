@@ -1,0 +1,545 @@
+<html>
+
+<template name="contact">
+  <div class="ui list">
+    <div class="item">
+      <i class="phone square icon"></i>
+      <div class="content">
+        <a href="tel:+1 650 812 4876">+1 650 812 4876</a><br/>
+      </div>
+    </div>
+
+    <div class="item">
+      <i class="at icon"></i>
+      <div class="content">
+        <a href="mailto:christian.fritz@gmail.com">christian.fritz@gmail.com</a><br/>
+      </div>
+    </div>
+
+    <div class="item">
+      <i class="world icon"></i>
+      <div class="content">
+        <a href="http://chfritz.github.io">chfritz.github.io</a><br/>
+      </div>
+    </div>
+
+    <div class="item">
+      <i class="travel icon"></i>
+      <div class="content">
+        <a href="http://www.parc.com/cfritz">www.parc.com/cfritz</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <i class="linkedin icon"></i>
+      <div class="content">
+        <a href="https://linkedin.com/in/christianfritz">linkedin.com/in/christianfritz</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <i class="github icon"></i>
+      <div class="content">
+        <a href="https://github.com/chfritz">github.com/chfritz</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <i class="stack overflow icon"></i>
+      <div class="content">
+        <a href="http://stackoverflow.com/users/1087119">stackoverflow.com/users/1087119</a>
+      </div>
+    </div>
+  </div>
+</template>
+
+<!-- ................................ -->
+
+<template name="education">
+
+  {{> job image="uoft.png"
+  title="Ph.D., Computer Science"
+  place="University of Toronto, Toronto, Ontario, Canada"
+  description="Thesis title: \"Monitoring the Generation and Execution of Optimal Plans\". Advisor: Prof. Sheila McIlraith, Knowledge Representation Group."
+  from="September 2004"
+  to="April 2009" }}
+
+
+  {{> job image="rwth.jpg"
+  title="M.Sc., Computer Science"
+  place="RWTH Aachen University, Aachen, Germany"
+  description="Thesis title: \"Integrating Decision-Theoretic Planning and Programming for Robot Control in Highly Dynamic Domains\". Advisor: Prof. Gerhard Lakemeyer, Knowledge Based Systems Group. Including: • Business Administration minor. Specialization: Technology and Innovation Management. • Study abroad at Universidad Complutense Madrid, Spain, 2000/2001."
+  from="September 1998"
+  to="November 2003" }}
+</template>
+
+<!-- ................................ -->
+
+<template name="experience">
+  {{#each jobs}}
+  {{> job}}
+  {{/each}}
+</template>
+
+<div class="data" id="job-am-parc">
+
+  In this role I have been leading two major projects at PARC in both of which
+  we designed and created new commercial offerings by PARC or Xerox. In uFab we
+  created the first fully automated computer aided process planning software for
+  CNC machining (<a href="https://ufab.io">uFab</a>). This was done over the
+  course of four years, with the team size varying between four and seven. In
+  the Mobility Marketplace project we are working with Xerox to build an open
+  data exchange and transaction platform for urban mobility that can reduce
+  energy consumption by facilitating multi-modal trip planning, ride-sharing,
+  and departure time optimization. A first version of the associated app was
+  launched on 1/27/2016 in Los Angeles (<a href="http://golaapp.com">GoLA</a>).
+  I proposed this project at PARC and secured funding for it from Xerox and
+  ARPA-E totaling more than $5M.
+
+</div>
+
+<div class="data" id="job-bibbase">
+
+  BibBase.org is a free web-service for researchers with the objective of being
+  the easiest way to set up and maintain a scientific publications page. I have
+  created this service out of a need I observed with myself as well as my peers
+  and faculty members in Toronto. The service has been seeing constant  growth
+  of around 25% YoY.
+
+</div>
+
+<div class="data" id="job-mrs-parc">
+
+  During this period we proposed a predecessor project to the uFab project to
+  DARPA and received two consecutive contracts for that. During the execution of
+  that project I assumed the role of tech lead and co-PI and also designed and
+  implemented the planner module (in C++). In 2012 I acted as interim program
+  manager for PARC's big data program.
+
+</div>
+
+<div class="data" id="job-isi">
+
+  As a post-doc at ISI I worked with Dr. Yolanda Gil on workflow synthesis and
+  was involved in DARPA's Bootstrapped Learning project (by Dan Oblinger). In
+  the latter we developed a formal framework for combining programming by
+  demonstration, programming by natural language instruction, and planning [<a
+  href="http://bibbase.org/network/publication/fritz-gil-aformalframeworkforcombiningnaturalinstructionanddemonstrationforenduserprogramming-2011">Paper</a>].
+
+</div>
+
+<div class="data" id="job-ra-aachen">
+
+  In this position I supervised and participated in the development of the robot
+  control software deployed on our soccer robots that competed in the RoboCup
+  Mid-Size league. Our team competed at the RoboCup World Cup in Padua in 2003
+  and in Lisbon in 2004 as well as in the German Opens in 2002, 2003, and 2004.
+  My team later went on to win the RoboCup@home service robotics world cup using
+  the same high-level control software I developed for the soccer leagues.
+
+  In this position I also supervised seminar courses. This included advising and
+  grading students on written and orally-presented summaries of papers selected
+  from current topics in the field of artificial intelligence.
+
+</div>
+
+<!-- ................................ -->
+
+<template name="expertise">
+  <div class="ui horizontal divider header tiny" style="font-size: smaller">
+    <i class="code icon"></i>
+    Development Background
+  </div>
+  <a href="http://stackoverflow.com/search?q=user:1087119+[meteor]" class="ui tiny label">
+    meteor
+  </a>
+  <a href="http://stackoverflow.com/search?q=user:1087119+[javascript]" class="ui tiny label">
+    javascript
+  </a>
+  <div class="ui tiny label"> html </div>
+  <div class="ui tiny label"> css </div>
+  <a href="http://stackoverflow.com/search?q=user:1087119+[nodejs]" class="ui tiny label">
+    nodejs
+  </a>
+  <div class="ui tiny label"> c/c++ </div>
+  <div class="ui tiny label"> java </div>
+  <div class="ui tiny label"> python </div>
+  <div class="ui tiny label"> prolog </div>
+  <div class="ui tiny label"> shell-scripting </div>
+  <div class="ui tiny label"> linux </div>
+
+  <div class="ui horizontal divider header tiny" style="font-size: smaller">
+    <i class="student icon"></i>
+    Research Background
+  </div>
+  <div class="ui tiny label"> planning </div>
+  <div class="ui tiny label"> execution monitoring </div>
+  <div class="ui tiny label"> GOLOG </div>
+  <div class="ui tiny label"> cognitive robotics </div>
+  <div class="ui tiny label"> knowledge representation </div>
+  <div class="ui tiny label"> user preferences </div>
+</template>
+
+<!-- ................................ -->
+
+<template name="intro">
+  I describe myself as a full-stack artificial intelligence (AI) research
+  developer and tech lead. I am experienced leading teams of both researchers
+  and software engineers but am hand-on and have development experience along
+  the full stack. During my tenure at PARC I have proposed several projects and
+  obtained funding for them from various sources (government, Xerox, commercial,
+  and internal). In leading these projects I often focus on connecting the big
+  picture with the devilish detail while still contributing directly. My
+  academic area of expertise is logic-based knowledge representation for
+  dynamical systems with specific application to AI planning and execution
+  monitoring. I chose this as my thesis topic after my previous, frustrating
+  experience trying to make real robots score goals in robotic soccer.
+</template>
+
+<!-- ................................ -->
+
+<template name="job">
+  <div class="row job title">
+    <div class="col-xs-9">
+      <h4 class="ui header">
+        <div class="content">
+          {{title}}
+          <div class="sub header">
+            {{{place}}}<br/>
+            {{from}} &mdash; {{to}}
+          </div>
+        </div>
+      </h4>
+    </div>
+    {{#if image}}
+    <div class="col-xs-3" style="text-align: right;">
+      <img class="logo" src="images/{{image}}">
+    </div>
+    {{/if}}
+  </div>
+
+  {{#if description}}
+  <div class="row job description">
+    <div class="col-sm-12">
+      {{{description}}}
+    </div>
+  </div>
+  {{/if}}
+</template>
+
+<!-- ................................ -->
+
+<template name="section">
+  <!-- <h3 class="ui horizontal divider header">
+    {{title}}
+  </h3> -->
+  <div class="ui section divider"></div>
+  <h3>{{title}}</h3>
+</template>
+
+<!-- ................................ -->
+
+<template name="main">
+  <div class="wrap">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Christian Fritz</h1>
+        Palo Alto Research Center &mdash;
+        3333 Coyote Hill Rd &mdash;
+        Palo Alto, CA 94304, USA
+      </div>
+    </div>
+
+    <!-- ....................................................... -->
+
+    <div class="row">
+      <div class="col-md-6 col-sm-6" style="font-size: small">
+        {{> contact }}
+      </div>
+
+      <div class="col-md-6 col-sm-6 expertise">
+        {{> expertise }}
+      </div>
+    </div>
+
+    <!-- ....................................................... -->
+
+    <div class="row">
+      <div class="col-md-12">
+        {{> intro}}
+      </div>
+    </div>
+
+    <!-- ....................................................... -->
+
+    <div class="row experience">
+      <div class="col-sm-12">
+        {{> section title="Experience"}}
+        {{> experience }}
+      </div>
+    </div>
+
+    <!-- ....................................................... -->
+
+    <div class="row education">
+      <div class="col-md-12">
+        {{> section title="Education"}}
+        {{> education}}
+      </div>
+    </div>
+
+    <!-- ....................................................... -->
+
+    <div class="row">
+      <div class="col-md-12">
+        {{> section title="Publications"}}
+        <myscript src="http://bibbase.org/show?bib=http://www.cs.toronto.edu/~fritz/publications/list.bib&jsonp=1">
+        </myscript>
+      </div>
+    </div>
+
+    <!-- ....................................................... -->
+
+    <div class="row">
+      <div class="col-md-12">
+        {{> section title="Patents"}}
+
+        Granted:
+        <ul>
+          <li>
+            <a href="https://www.google.com/patents/US9235658">US 9235658</a>:
+            Automated Fixture Configuration for Rapid Manufacturing Planning.<br/>
+            Saigopal Nelaturi, Arvind Rangarajan, Tolga Kurtoglu, Christian Fritz. 2013.
+          </li>
+
+          <li>
+            <a href="https://www.google.com/patents/US8849634">US 8849634</a>:
+            Method for Identifying the Maximal Packing Density of Shifting-tiles Automated Warehouses.<br/>
+            Christian Fritz, Minh Binh Do, Serdar Uckun. 2011.
+          </li>
+        </ul>
+
+        Pending:
+        <ul>
+          <li>
+            Automatic Spatial Planning for Machining Operations.<br/>
+            Saigopal Nelaturi, Gregory Burton, Christian Fritz, Tolga Kurtoglu. 2015.
+          </li>
+
+          <li>
+            Pervasive State Estimation and an Application to Distributed Systems.<br/>
+            Shekhar Gupta, Christian Fritz, Johan de Kleer. 2015.
+          </li>
+
+          <li>
+            Dynamically Adaptive, Resource Aware Scheduler.<br/>
+            Shekhar Gupta, Christian Fritz, Johan de Kleer. 2014.
+          </li>
+
+          <li>
+            System and Method for Efficient Task Scheduling in Heterogeneous, Distributed Compute Infrastructures via Pervasive Diagnosis.<br/>
+            Christian Fritz, Shekhar Gupta, Johan de Kleer, Robert Price. 2012.
+          </li>
+
+          <li>
+            Automated Manufacturability Feedback Analysis.<br/>
+            Saigopal Nelaturi, Tolga Kurtoglu, Gregory Burton, Christian Fritz. 2012.
+          </li>
+        </ul>
+
+      </div>
+    </div>
+    <!-- ....................................................... -->
+    <div class="row">
+      <div class="col-md-12">
+        {{> section title="Scholarships and Awards"}}
+
+        <ul>
+
+          <li>PARC 2011 Exceptional Performance Award.</li>
+
+          <li>The 2011 International Conference on Intelligent User Interfaces
+          Best Paper Award Nomination.</li>
+
+          <li>Triplification Challenge 2010 Open Track Award Honorary
+          Mention.</li>
+
+          <li>The International Conference on Automated Planning and Scheduling
+          (ICAPS) 2010 Best Dissertation Award Honorable Mention.</li>
+
+          <li>Wolfond Fellowship, University of Toronto, 2008.</li>
+
+          <li>The International Conference on Automated Planning and Scheduling
+          (ICAPS) 2007 Best Doctoral Consortium Paper Award.</li>
+
+          <li>Springorum-Denkm&uuml;nze (University Medal) RWTH Aachen,
+          2004.</li>
+
+          <li>Scholarship by sd&amp;m (http://www.sdm.de) in 2002 and 2003 (one
+          awarded annually at RWTH Aachen).</li>
+
+        </ul>
+
+      </div>
+    </div>
+    <!-- ....................................................... -->
+    <div class="row">
+      <div class="col-md-12">
+        {{> section title="Teaching and Student Supervision"}}
+        <ul>
+          <li>Teaching Assistant, “Programming on the Web” (CSC 309, University of Toronto).<br/>
+            Summer 2007.
+          </li>
+          <li>Teaching Assistant, “Principles of Programming Languages” (CSC 324, University of Toronto).<br/>
+            Summer 2005, Fall 2005, Summer 2006, Winter 2007, and Summer 2008.
+          </li>
+          <li>Teaching Assistant, “Introduction to Artificial Intelligence” (CSC 384, University of Toronto).<br/>
+            Winter 2005, Winter 2006, Fall 2006, Fall 2007, Winter 2008, and Fall 2008.
+
+            <p> My duties included giving lectures, designing and marking
+            assignments and exams, conducting tutorials, holding office hours,
+            and answering student questions via email, on the course newsgroup,
+            or in person.</p>
+          </li>
+        </ul>
+
+        I supervised the following students:
+        <ul>
+          <li>Oliver Stollmann, 2013: Master’s student from ETH Zuerich, Switzerland, doing his thesis project work at PARC.</li>
+          <li>Shekhar Gupta, 2012-2015: PhD student from UT Delft, Netherlands, doing his doctoral thesis work at PARC.</li>
+        </ul>
+
+      </div>
+    </div>
+    <!-- ....................................................... -->
+    <div class="row">
+      <div class="col-md-12">
+        {{> section title="Academic Service"}}
+
+        I have co-organized the following workshop:
+        <ul>
+          <li>“Generalized Planning: Macros, Loops, Domain Control”, held at The 19th Intl. Conference on
+            Automated Planning and Scheduling (ICAPS), September 20th, 2009, Thessaloniki, Greece.
+          </li>
+        </ul>
+
+        I have served on grant proposal review panels for:
+        <ul>
+          <li>The German-Israeli Foundation for Scientific Research and Development (2016)</li>
+          <li>NSF, Intelligent Information Systems Division (2010, 2012)</li>
+        </ul>
+
+        I have served on the (senior-)program committee of:
+        <ul>
+          <li>The International Joint Conference on Ariticial Intelligence (IJCAI), 2011, 2015.</li>
+          <li>The International Conference on Automated Planning and Scheduling (ICAPS), 2011, 2012, 2014.</li>
+          <li>The AAAI Conference on Artificial Intelligence (AAAI), 2010, 2011, 2012.</li>
+          <li>The International Conference on Principles of Knowledge Representation and Reasoning (KR). 2012.</li>
+          <li>The International Conference on Intelligent User Interfaces (IUI), 2011.</li>
+          <li>The International Workshop on Nonmonotonic Reasoning, Action and Change (NRAC), 2011.</li>
+          <li>The AAAI-2011 Workshop on Gneralized Planning (GenPlan), 2011.</li>
+        </ul>
+
+        I have reviewed for the following journals, conferences, and workshops.
+        <ul>
+          <li>Artificial Intelligence (AIJ), Elsevier, 2006, 2008, 2009, 2010.</li>
+          <li>Journal of Ariticial Intelligence Research (JAIR), 2013.</li>
+          <li>Robotics and Autonomous Systems (RAS), Elsevier, 2010.</li>
+          <li>AI Communications, The European Journal on Artificial Intelligence, 2007.</li>
+          <li>Knowledge Engineering Review, 2010.</li>
+          <li>The Intl. World Wide Web Conference (WWW), 2010.</li>
+          <li>The Intl. Joint Conference on Artificial Intelligence (IJCAI), 2003, 2007, 2009. <li>The AAAI Conference on Artificial Intelligence (AAAI), 2008.</li>
+          <li>The Intl. Conference on Principles of Knowledge Representation and Reasoning (KR), 2006, 2008. <li>The Intl. Conference on Automated Planning and Scheduling (ICAPS), 2007, 2008, 2009, 2010. <li>The Intl. Joint Conference on Autonomous Agents and Multiagent Systems (AAMAS), 2004.</li>
+          <li>The German Conference on Artificial Intelligence (KI), 2004.</li>
+          <li>The Intl. Symposium on Logical Formalizations of Commonsense Reasoning, 2009. <li>The North East Student Colloquium on Artificial Intelligence (NESCAI), 2006.</li>
+          <li>The Intl. Cognitive Robotics Workshop (CogRob), 2004.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ....................................................... -->
+    <div class="row">
+      <div class="col-md-12">
+        {{> section title="Skills"}}
+        <ul>
+
+          <li>Experienced team worker, programmer, and player.</li>
+
+          <li>Experienced with semantic web technology: RDF, OWL2, SPARQL,
+          TripleStores, Sesame, etc.</li>
+
+          <li>Language Proficiency: English (fluent), German (native), Spanish
+          (basic).</li>
+
+      </div>
+    </div>
+    <!-- ....................................................... -->
+    <div class="row">
+      <div class="col-md-12">
+        {{> section title="Portfolio"}}
+        <ul>
+          <li class="item">
+            <a href="http://bibbase.org">BibBase.org</a>
+            <div class="description">
+              The easiest way to set up and maintain a scientific publications page.<br/>
+              Technologies: Meteor, mongodb.
+            </div>
+          </li>
+
+          <li class="item">
+            <a href="https://ufab.io">uFab.io</a>
+            <div class="description">
+              Automated process planning for CNC machining.<br/>
+              Technologies: C++, mongodb, express, angular, node.js.
+            </div>
+          </li>
+
+          <li class="item">
+            <a href="http://step3d.com">STEP3D.com</a>
+            <div class="description">
+              The world's simplest STEP (CAD) viewer.<br/>
+              Technologies: Meteor, mongodb, three.js (webGL).
+            </div>
+          </li>
+
+          <li class="item">
+            <a href="http://typhone.xyz">TyPhone.xyz</a>
+            <div class="description">
+              An open-source alternative to AirDroid/PushBullet.<br/>
+              Technologies: Meteor, webRTC, Cordova.
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</template>
+
+
+
+<!-- ...................................................... -->
+
+<!-- http://meteor.github.io/blaze/ ROCKS! -->
+<head>
+
+  <TITLE>Christian Fritz: CV</TITLE>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <script src="prepare.js"></script>
+
+  <!-- include last: -->
+  <script src="blaze.js" class="remove"></script>
+  <script src="main.js" class="remove"></script>
+  <script src="cleanup.js" class="remove"></script>
+</head>
+
+<body>
+</body>
+
+</html>
