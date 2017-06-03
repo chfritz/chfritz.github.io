@@ -38,16 +38,9 @@ Template.experience.helpers({
         image: "savioke.png",
         title: "Principal Robotics Applications Engineer",
         place: "Savioke Inc, Santa Clara, CA",
-        description: "",
+        description: get("job-savioke"),
         from: "March 2016",
         to: "Present"
-      }, {
-        image: "parc.png",
-        title: "Area Manager, \"Representation and Planning\"",
-        place: "Systems Science Lab, Palo Alto Research Center, Palo Alto, CA",
-        description: get("job-am-parc"),
-        from: "August 2014",
-        to: "March 2016"
       }, {
         image: "bibbase.png",
         title: "Founder and CEO",
@@ -55,6 +48,13 @@ Template.experience.helpers({
         description: get("job-bibbase"),
         from: "2005",
         to: "Present",
+      }, {
+        image: "parc.png",
+        title: "Area Manager, \"Representation and Planning\"",
+        place: "Systems Science Lab, Palo Alto Research Center, Palo Alto, CA",
+        description: get("job-am-parc"),
+        from: "August 2014",
+        to: "March 2016"
       }, {
         image: "parc.png",
         title: "Research Scientist",

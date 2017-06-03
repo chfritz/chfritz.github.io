@@ -93,6 +93,22 @@
   {{/each}}
 </template>
 
+<div class="data" id="job-savioke">
+
+  I currently lead the robotic applications team at Savioke, which currently
+  consists of five software engineers, both local and remote.
+  Our team is responsible for implementing the application layer software of our
+  robots, which turns robots that know how to map, navigate, and localize
+  themselves, into competent and friendly helpers that can perform task-level
+  planning and create value, e.g., by delivering items. We are also responsible
+  for implementing and maintaining our support infrastructure and robot control
+  centers as well as all multi-robot coordination. We apply principles from
+  artificial intelligence, knowledge representation, cognitive robotics, and
+  human-robot interaction and are excited to contribute to the advancement of
+  both theory and practice in these domains.
+
+</div>
+
 <div class="data" id="job-am-parc">
 
   In this role I have been leading two major projects at PARC in both of which
@@ -112,11 +128,9 @@
 
 <div class="data" id="job-bibbase">
 
-  BibBase.org is a free web-service for researchers with the objective of being
-  the easiest way to set up and maintain a scientific publications page. I have
-  created this service out of a need I observed with myself as well as my peers
-  and faculty members in Toronto. The service has been seeing constant  growth
-  of around 25% YoY.
+  BibBase.org is a free web-service for scientists that let's them easily set up
+  and maintain a scientific publications page. In recent years BibBase has
+  been growing steadily around 40% year-over-year.
 
 </div>
 
@@ -173,11 +187,12 @@
   <a href="http://stackoverflow.com/search?q=user:1087119+[nodejs]" class="ui tiny label">
     node.js
   </a>
+  <div class="ui tiny label"> ros </div>
+  <div class="ui tiny label"> git </div>
   <div class="ui tiny label"> c/c++ </div>
   <div class="ui tiny label"> java </div>
   <div class="ui tiny label"> python </div>
   <div class="ui tiny label"> prolog </div>
-  <div class="ui tiny label"> git </div>
   <div class="ui tiny label"> shell-scripting </div>
   <div class="ui tiny label"> linux </div>
 
@@ -195,18 +210,32 @@
 
 <!-- ................................ -->
 
-<template name="intro"> I describe myself as a full-stack artificial
-intelligence (AI) research developer and tech lead. I am experienced leading
-teams of both researchers and software engineers but am hand-on and have
-development experience along the full stack. During my tenure at PARC I have
-proposed several projects and obtained funding for them from various sources
-(government, Xerox, commercial, and internal). In leading these projects I often
-focus on connecting the big picture with the devilish detail while still
-contributing directly. My academic area of expertise is knowledge representation
-and reasoning for dynamical systems with specific application to AI planning and
-execution monitoring. I chose this topic for my thesis after being frustrated
-that the theoretically perfect plans for our autonomous soccer robots to score
-goals only rarely worked in practice. </template>
+<template name="intro">
+
+  <p>I am a tech-lead and full-stack artificial intelligence developer. I have
+  experience leading teams of up to 12 researchers and software engineers but am
+  hands-on and have experience along the entire robotics stack from sensor
+  drivers to high-level planning and control as well. I actively contribute to
+  ROS.</p>
+  <!-- During my tenure at PARC I have
+  attracted more than $5M in project funding from external sources.  -->
+
+  <p>My management approach is to lead from within: act as a regular team member
+  and provide leadership and make decisions only where needed. As such I focus
+  on connecting the big picture with the devilish detail, aligning technical
+  development with business strategy to maximize my team's impact. In reverse I
+  motivate my team by being able to explain exactly how their contributions
+  affect business success and the real-world impact we are making.</p>
+
+  <p>My academic area of expertise is knowledge representation and reasoning for
+  dynamical systems with specific application to AI planning and execution
+  monitoring.</p>
+
+   <!-- I chose this topic for my thesis after being frustrated that the
+  theoretically perfect plans for our autonomous soccer robots to score goals
+  only rarely worked in practice.  -->
+
+</template>
 
 <!-- ................................ -->
 
@@ -304,18 +333,11 @@ goals only rarely worked in practice. </template>
 
     <div class="row">
       <div class="col-md-12">
-        {{> section title="Publications"}}
-        <myscript src="https://bibbase.org/show?bib=http://www.cs.toronto.edu/~fritz/publications/list.bib&jsonp=1">
-        </myscript>
-      </div>
-    </div>
-
-    <!-- ....................................................... -->
-
-    <div class="row">
-      <div class="col-md-12">
-        {{> section title="Social Media"}}
+        {{> section title="Social Media Publications"}}
         <ul>
+          <li>VentureBeat 2017:
+            <a href="https://venturebeat.com/2017/03/05/how-robotic-delivery-will-disrupt-the-grocery-industry"
+               >How robotic delivery will disrupt the grocery industry</a></li>
           <li>El Mundo 2015:
             <a href="http://www.elmundo.es/economia/2015/03/30/5519159422601da0748b457e.html"
                >El final del autom&oacute;vil en propiedad est&aacute; pr&oacute;ximo</a></li>
@@ -338,10 +360,20 @@ goals only rarely worked in practice. </template>
           <li>Zoox 2016: "Mobility-as-a-Service"</li>
           <li>Oracle Open World 2015: "The Xerox Mobility Marketplace"</li>
           <li>Google Machine Learning Seminar 2014: "Using high-level
-          languages to specify inductive bias?"</li>
+          languages to specify inductive bias"</li>
           <li>ICAPS 2010, Best-thesis Runner-up Award: "Monitoring the
           Generation and Execution of Optimal Plans"</li>
         </ul>
+      </div>
+    </div>
+
+    <!-- ....................................................... -->
+
+    <div class="row">
+      <div class="col-md-12">
+        {{> section title="Publications"}}
+        <myscript src="https://bibbase.org/show?bib=http://www.cs.toronto.edu/~fritz/publications/list.bib&jsonp=1">
+        </myscript>
       </div>
     </div>
 
@@ -369,10 +401,10 @@ goals only rarely worked in practice. </template>
             Computer-implemented system and method for determining
             spatial locations of fixture element fixturing points on a
             part to be manufactured</br>
-            
+
             Saigopal Nelaturi, Arvind Rangarajan, Tolga Kurtoglu, Christian Fritz. 2013.
           </li>
-          
+
           <li>
             <a href="https://www.google.com/patents/US9292626">US 9292626</a>:
             Computer numerical control (CNC) machining tool and method
@@ -380,7 +412,7 @@ goals only rarely worked in practice. </template>
             Saigopal Nelaturi, Gregory Burton, Christian Fritz, Tolga
             Kurtoglu. 2015.
           </li>
-          
+
           <li>
             <a href="https://www.google.com/patents/US8849634">US 8849634</a>:
             Method for Identifying the Maximal Packing Density of Shifting-tiles Automated Warehouses.<br/>
@@ -469,10 +501,10 @@ goals only rarely worked in practice. </template>
         I supervised the following students:
         <ul>
 
-          <li>Oliver Stollmann,<br/>Master's student from ETH Zuerich, Switzerland,
+          <li>Oliver Stollmann,<br/>Master's student from ETH Z&uuml;rich, Switzerland,
           doing his thesis project work at PARC. 2013</li>
 
-          <li>Shekhar Gupta,<br/>PhD student from UT Delft, Netherlands, doing his
+          <li>Shekhar Gupta,<br/>PhD student from TU Delft, Netherlands, doing his
           doctoral thesis work at PARC. 2012-2015.</li>
 
         </ul>
@@ -499,25 +531,25 @@ goals only rarely worked in practice. </template>
 
         I have served on the (senior-)program committee of:
         <ul>
-          <li>The International Joint Conference on Ariticial Intelligence (IJCAI), 2011, 2015.</li>
+          <li>The International Joint Conference on Artificial Intelligence (IJCAI), 2011, 2015.</li>
           <li>The International Conference on Automated Planning and Scheduling (ICAPS), 2011, 2012, 2014.</li>
           <li>The AAAI Conference on Artificial Intelligence (AAAI), 2010, 2011, 2012.</li>
           <li>The International Conference on Principles of Knowledge Representation and Reasoning (KR). 2012.</li>
           <li>The International Conference on Intelligent User Interfaces (IUI), 2011.</li>
-          <li>The International Workshop on Nonmonotonic Reasoning, Action and Change (NRAC), 2011.</li>
-          <li>The AAAI-2011 Workshop on Gneralized Planning (GenPlan), 2011.</li>
+          <li>The International Workshop on Non-monotonic Reasoning, Action and Change (NRAC), 2011.</li>
+          <li>The AAAI-2011 Workshop on Generalized Planning (GenPlan), 2011.</li>
         </ul>
 
         I have reviewed for the following journals, conferences, and workshops.
         <ul>
           <li>Artificial Intelligence (AIJ), Elsevier, 2006, 2008, 2009, 2010.</li>
-          <li>Journal of Ariticial Intelligence Research (JAIR), 2013.</li>
+          <li>Journal of Artificial Intelligence Research (JAIR), 2013.</li>
           <li>Robotics and Autonomous Systems (RAS), Elsevier, 2010.</li>
           <li>AI Communications, The European Journal on Artificial Intelligence, 2007.</li>
           <li>Knowledge Engineering Review, 2010.</li>
           <li>The Intl. World Wide Web Conference (WWW), 2010.</li>
           <li>The Intl. Joint Conference on Artificial Intelligence (IJCAI), 2003, 2007, 2009. <li>The AAAI Conference on Artificial Intelligence (AAAI), 2008.</li>
-          <li>The Intl. Conference on Principles of Knowledge Representation and Reasoning (KR), 2006, 2008. <li>The Intl. Conference on Automated Planning and Scheduling (ICAPS), 2007, 2008, 2009, 2010. <li>The Intl. Joint Conference on Autonomous Agents and Multiagent Systems (AAMAS), 2004.</li>
+          <li>The Intl. Conference on Principles of Knowledge Representation and Reasoning (KR), 2006, 2008. <li>The Intl. Conference on Automated Planning and Scheduling (ICAPS), 2007, 2008, 2009, 2010. <li>The Intl. Joint Conference on Autonomous Agents and Multi-agent Systems (AAMAS), 2004.</li>
           <li>The German Conference on Artificial Intelligence (KI), 2004.</li>
           <li>The Intl. Symposium on Logical Formalizations of Commonsense Reasoning, 2009. <li>The North East Student Colloquium on Artificial Intelligence (NESCAI), 2006.</li>
           <li>The Intl. Cognitive Robotics Workshop (CogRob), 2004.</li>
@@ -530,10 +562,7 @@ goals only rarely worked in practice. </template>
       <div class="col-md-12">
         {{> section title="Other Skills"}}
         <ul>
-
-          <li>Experienced team worker, programmer, and player.</li>
-
-          <li>Experienced with semantic web technology: RDF, OWL2, SPARQL,
+          <li>Experience with semantic web technology: RDF, OWL2, SPARQL,
           TripleStores, Sesame, etc.</li>
 
           <li>Language Proficiency: English (fluent), German (native), Spanish
