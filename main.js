@@ -36,7 +36,7 @@ Template.experience.helpers({
     return [
       {
         image: "savioke.png",
-        title: "Principal Robotics Applications Engineer",
+        title: "Principal Robotics Applications Engineer and Team Lead",
         place: "Savioke Inc, Santa Clara, CA",
         description: get("job-savioke"),
         from: "March 2016",
