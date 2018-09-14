@@ -36,10 +36,17 @@ Template.experience.helpers({
     return [
       {
         image: "savioke.png",
+        title: "Vice President of Software Engineering",
+        place: "Savioke Inc, San Jose, CA",
+        description: get("job-savioke-vp"),
+        from: "July 2018",
+        to: "Present"
+      }, {
+        image: "savioke.png",
         title: "Principal Robotics Applications Engineer and Team Lead",
-        place: "Savioke Inc, Santa Clara, CA",
+        place: "Savioke Inc, San Jose, CA",
         description: get("job-savioke"),
-        from: "March 2016",
+        from: "June 2018",
         to: "Present"
       }, {
         image: "bibbase.png",
