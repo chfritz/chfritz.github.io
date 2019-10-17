@@ -35,12 +35,19 @@ Template.experience.helpers({
   jobs: function() {
     return [
       {
+        image: "robust.png",
+        title: "Pricipal Scientist",
+        place: "Robust AI, Inc., Palo Alto, CA",
+        description: get("job-robustai"),
+        from: "August 2019",
+        to: "Present"
+      }, {
         image: "savioke.png",
         title: "Vice President of Software Engineering",
         place: "Savioke Inc., San Jose, CA",
         description: get("job-savioke-vp"),
         from: "July 2018",
-        to: "Present"
+        to: "August 2019"
       }, {
         image: "savioke.png",
         title: "Principal Robotics Applications Engineer and Team Lead",
