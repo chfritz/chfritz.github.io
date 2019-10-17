@@ -1,0 +1,23 @@
+{
+  "name": "chfritz.github.io",
+  "version": "1.0.0",
+  "description": "run",
+  "main": "main.js",
+  "dependencies": {
+    "puppeteer": "^1.20.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chfritz/chfritz.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chfritz/chfritz.github.io/issues"
+  },
+  "homepage": "https://github.com/chfritz/chfritz.github.io#readme"
+}
