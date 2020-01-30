@@ -36,7 +36,7 @@ Template.experience.helpers({
     return [
       {
         image: "robust.png",
-        title: "Pricipal Scientist",
+        title: "Principal Scientist",
         place: "Robust AI, Inc., Palo Alto, CA",
         description: get("job-robustai"),
         from: "August 2019",
