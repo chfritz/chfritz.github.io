@@ -33,14 +33,20 @@ Template.education.helpers({
 
 Template.experience.helpers({
   jobs: function() {
-    return [
-      {
+    return [{
+        image: "logo_white.png",
+        title: "Co-founder and CTO",
+        place: "Lumin Robotics, Inc., Menlo Park, CA",
+        description: get("job-lumin"),
+        from: "December 2019",
+        to: "Present"
+      }, {
         image: "robust.png",
         title: "Principal Scientist",
         place: "Robust AI, Inc., Palo Alto, CA",
         description: get("job-robustai"),
         from: "August 2019",
-        to: "Present"
+        to: "November 2019"
       }, {
         image: "savioke.png",
         title: "Vice President of Software Engineering",
