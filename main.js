@@ -34,12 +34,19 @@ Template.education.helpers({
 Template.experience.helpers({
   jobs: function() {
     return [{
+        image: "tr.png",
+        title: "Founder",
+        place: "stealth robotics startup, Menlo Park, CA",
+        description: "Enabling robots to do more",
+        from: "January 2021",
+        to: "Present",
+      }, {
         image: "logo_white.png",
         title: "Co-founder and CTO",
         place: "Lumin Robotics, Inc., Menlo Park, CA",
         description: get("job-lumin"),
         from: "December 2019",
-        to: "Present"
+        to: "December 2020",
       }, {
         image: "robust.png",
         title: "Principal Scientist",

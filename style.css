@@ -30,14 +30,14 @@ body {
 }*/
 
 img.logo {
-  width: 100%;
-  max-width: 6em;
-  min-width: 3em;
-  height: auto;
+  max-width: 100%;
+  /* max-width: 6em;
+  min-width: 3em; */
+  max-height: 3em;
 }
 
 .row.job.title {
-  margin-top: 1em;
+  margin-top: 2em;
 }
 
 .row.job.description {
