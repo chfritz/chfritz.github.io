@@ -36,8 +36,8 @@ Template.experience.helpers({
     return [{
         image: "tr.png",
         title: "Founder",
-        place: "stealth robotics startup, Menlo Park, CA",
-        description: "Enabling robots to do more",
+        place: "Transitive Robotics, Menlo Park, CA",
+        description: "Software components for robotic companies to operate their fleets",
         from: "January 2021",
         to: "Present",
       }, {
