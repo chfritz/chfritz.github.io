@@ -1,0 +1,267 @@
+---
+import { getEntry, getCollection, render } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Container from '@/components/Container.astro';
+import Author from '@/components/ui/Author.astro';
+import { DEFAULT_CONFIGURATION } from '@/lib/constants';
+import WorkExperience from '@/components/ui/WorkExperience.astro';
+import Talk from '@/components/ui/Talk.astro';
+import { sortJobsByDate } from '@/lib/utils';
+
+const entry = await getEntry('pages', 'homepage');
+
+if (!entry) {
+  throw new Error('Homepage entry not found');
+}
+
+const { Content } = await render(entry);
+
+// const links = await getCollection('links');
+const links = [
+  {label: 'LinkedIn', name: 'Christian Fritz', url: 'https://www.linkedin.com/in/christianfritz'},
+  // {label: 'Website', name: 'chfritz.github.io', url: 'https://chfritz.github.io'},
+  {label: 'GitHub', name: 'chfritz', url: 'https://github.com/chfritz'},
+  {label: 'X', name: 'chfritz', url: 'https://x.com/chfritz'},
+];
+
+const socialMediaPosts = [
+  { title: 'How robotic delivery will disrupt the grocery industry',
+    outlet: 'VentureBeat',
+    year: 2017,
+    url: 'https://venturebeat.com/2017/03/05/how-robotic-delivery-will-disrupt-the-grocery-industry',
+  },
+  { title: 'El final del autom&oacute;vil en propiedad est&aacute; pr&oacute;ximo',
+    outlet: 'El Mundo',
+    year: 2015,
+    url: 'http://www.elmundo.es/economia/2015/03/30/5519159422601da0748b457e.html',
+  },
+  { title: 'Mobility-as-a-service: Turning transportation into a software industry',
+    outlet: 'VentureBeat',
+    year: 2014,
+    url: 'http://venturebeat.com/2014/12/13/mobility-as-a-service-turning-transportation-into-a-software-industry',
+  },
+  { title: "Society's next big challenge: infinite data",
+    outlet: 'VentureBeat',
+    year: 2013,
+    url: 'http://venturebeat.com/2013/04/05/societys-next-big-challenge-infinite-data/',
+  },
+];
+
+const jobs = await getCollection('jobs');
+const sortedJobs = sortJobsByDate(jobs);
+const talks = await getCollection('talks');
+
+const pubs = await getEntry('pages', 'publications');
+const { Content: Publications } = pubs ? await render(pubs) : {};
+
+---
+
+<BaseLayout seo={entry.data.seo}>
+  <Container as="section" class="py-6">
+    <Author {...DEFAULT_CONFIGURATION.author} />
+  </Container>
+
+  <Container as="section" class="py-6" title="About">
+    <div class="prose max-w-none dark:prose-invert">
+      <Content />
+    </div>
+  </Container>
+  {
+    links.length > 0 && (
+      <Container as="section" class="py-8" title="Contact">
+        <ul class="flex flex-col gap-3">
+          {links.map((link) => (
+            <li class="py-0.5">
+              <div class="flex items-center gap-5">
+                <span class="min-w-28 text-muted-foreground">
+                  {link.label}
+                </span>
+                <a
+                  class="text-headings font-medium"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href={link.url}
+                >
+                  {link.name}
+                </a>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </Container>
+    )
+  }
+  {
+    false && sortedJobs.length > 0 && (
+      <Container as="section" class="py-6" title="Work Experience">
+        <ul class="flex flex-col gap-8">
+          {sortedJobs.map((job) => (
+            <WorkExperience entry={job} />
+          ))}
+        </ul>
+      </Container>
+    )
+  }
+  {
+    talks.length > 0 && (
+      <Container as="section" class="py-6" title="Speaking">
+        <ul class="flex flex-col gap-8">
+          {talks.map((talk) => (
+            <Talk entry={talk} />
+          ))}
+        </ul>
+      </Container>
+    )
+  }
+
+  <Container as="section" class="py-6" title="Social Media Publications">
+    <ol class="list-decimal list-outside ml-4 px-4">
+      {socialMediaPosts.map(({title, outlet, year, url}) => <li>
+        {outlet}, {year}: <a href={url}
+          style={{textDecoration: 'dotted underline'}} set:html={title}></a>
+      </li>)}
+    </ol>
+  </Container>
+
+
+  {pubs && <Container as="section" class="py-6" title="Publications">
+    <Publications />
+  </Container>}
+
+
+  <Container as="section" class="py-6" title="Patents">
+    <h1 class="font-semibold text-headings">Granted</h1>
+    <ol class="list-decimal list-outside ml-4 px-4">
+      <li>
+        <a href="https://patents.google.com/patent/US11720079B2/en">
+          US 11,720,079 B2
+        </a>: System and method for computer numerical control (CNC) tool without undercut features operations planning with the aid of a digital computer.<br/>
+        Saigopal Nelaturi, Christian Fritz, Gregory Burton, Tolga Kurtoglu
+      </li>
+
+      <li>
+        <a href="https://patents.google.com/patent/US10991063B2/en">
+          US 10,991,063 B2
+        </a>: System and method for optimization of on-demand microtransit.<br/>
+        Matthew E. Klenk, Christian Fritz, Rong Yang
+      </li>
+
+      <li>
+        <a href="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=10967469.PN.&OS=PN/10967469&RS=PN/10967469">
+          US 10,967,469
+        </a>:
+        System and method for fixture form-closure determination for part manufacturing with the aid of a digital computer
+        .<br/>
+        Saigopal Nelaturi, Arvind Rangarajan, Tolga Kurtoglu, Christian Fritz
+      </li>
+
+      <li>
+        <a href="https://patents.google.com/patent/US10252419B2">
+          US 10,252,419</a>:
+        System and method for robotic delivery between moving targets.<br/>
+        Christian Fritz, Adrian Canoso, Robert S. Bauer, Izumi Yaskawa, Steve Cousins
+      </li>
+
+      <li>
+        <a href="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&Sect2=HITOFF&p=1&u=%2Fnetahtml%2FPTO%2Fsearch-bool.html&r=1&f=G&l=50&co1=AND&d=PTXT&s1=10698413&OS=10698413&RS=10698413">
+          US 10,698,413</a>:
+        Apparatus, System, and Method for Mobile Robot Relocalization.<br/>
+        Tessa Lau, Christian Fritz, Philipp Herget, Robert S. Bauer.
+      </li>
+
+      <li>
+        <a href="https://patents.google.com/patent/US20170220028A1">
+          US 10,564,626 B2</a>:
+        Planning Of Computer Numerical Control (CNC) Machining Operations
+        With The Aid Of A Digital Computer. <br/> Saigopal Nelaturi,
+        Christian Fritz, Gregory Burton, Tolga Kurtoglu.
+      </li>
+
+      <li>
+        <a href="https://patents.google.com/patent/US10300570B2">
+          US 10,300,570</a>: System And Method For Determining Spatial
+        Locations Of Fixture Element Fixturing Points On A Part To
+        Be Manufactured With The Aid Of A Digital Computer.<br/>
+        Saigopal Nelaturi, Arvind Rangarajan, Tolga Kurtoglu, Christian Fritz.
+      </li>
+
+      <li>
+        US 10,191,474: System and Method For Locating Clamping
+        Points For A Part To Be Manufactured Through Computer
+        Numerical Control (CNC) Machining Operations With The Aid
+        Of A Digital Computer.<br/>  Saigopal Nelaturi, Gregory Burton,
+        Christian Fritz, and Tolga Kurtoglu. 2013.
+      </li>
+
+      <li>
+        US 9,939,814: Computer System and Method for Automated Mapping by Robots.<br/>
+        Robert S. Bauer, Alain Minier, Stephan Wirth, Lucas Chiesa, Christian Fritz,
+        Adrian Canoso. 2017.
+      </li>
+
+      <li>
+        US 10,089,140: Dynamically adaptive, resource aware system and method for scheduling.<br/>
+        Shekhar Gupta, Christian Fritz, and Johan de Kleer. 2015.
+      </li>
+
+
+      <li>
+        US 9,934,071: Pervasive State Estimation and an Application to Distributed Systems.<br/>
+        Shekhar Gupta, Christian Fritz, Johan de Kleer. 2015.
+      </li>
+
+      <li>
+        <a href="https://patents.google.com/patent/US9934071B2/en">US 9,934,071B2</a>:
+        Job scheduler for distributed systems using pervasive state estimation with modeling of capabilities of compute nodes.<br/>
+        Shekhar Gupta, Christian Fritz, Johan de Kleer. 2015.
+      </li>
+
+      <li>
+        US 9,875,142: System and Method for Efficient Task Scheduling in Heterogeneous, Distributed Compute Infrastructures via Pervasive Diagnosis.<br/>
+        Christian Fritz, Shekhar Gupta, Johan de Kleer, Robert Price. 2013.
+      </li>
+
+      <li>
+        US 9,672,064: Dynamically Adaptive, Resource Aware Scheduler.<br/>
+        Shekhar Gupta, Christian Fritz, Johan de Kleer. 2014.
+      </li>
+
+      <li>
+        <a href="https://www.google.com/patents/US9235658">US 9,235,658</a>:
+        Automated Fixture Configuration for Rapid Manufacturing Planning.<br/>
+        Saigopal Nelaturi, Arvind Rangarajan, Tolga Kurtoglu, Christian Fritz. 2013.
+      </li>
+
+      <li>
+        <a href="https://www.google.com/patents/US9566679">US 9,566,679</a>
+        Computer-implemented system and method for determining
+        spatial locations of fixture element fixturing points on a
+        part to be manufactured</br>
+
+      Saigopal Nelaturi, Arvind Rangarajan, Tolga Kurtoglu, Christian Fritz. 2013.
+    </li>
+
+    <li>
+      <a href="https://www.google.com/patents/US9292626">US 9,292,626</a>:
+      Computer numerical control (CNC) machining tool and method
+      for controlling a CNC machining tool<br/>
+      Saigopal Nelaturi, Gregory Burton, Christian Fritz, Tolga
+      Kurtoglu. 2015.
+    </li>
+
+    <li>
+      <a href="https://www.google.com/patents/US8849634">US 8,849,634</a>:
+      Method for Identifying the Maximal Packing Density of Shifting-tiles Automated Warehouses.<br/>
+      Christian Fritz, Minh Binh Do, Serdar Uckun. 2011.
+    </li>
+  </ol>
+
+  <h1 class="font-semibold text-headings">Pending</h1>
+  <ol class="list-decimal list-outside ml-4 px-4">
+    <li>
+      A patent in the robotic disinfection space. Not yet published.
+    </li>
+  </ol>
+</Container>
+
+</BaseLayout>
