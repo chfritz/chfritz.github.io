@@ -1,23 +1,30 @@
 {
-  "name": "chfritz.github.io",
-  "version": "1.0.0",
-  "description": "run",
-  "main": "main.js",
-  "dependencies": {
-    "puppeteer": "^1.20.0"
-  },
-  "devDependencies": {},
+  "name": "folio",
+  "type": "module",
+  "version": "0.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chfritz/chfritz.github.io.git"
+  "dependencies": {
+    "@astrojs/mdx": "4.3.5",
+    "@astrojs/react": "^4.3.1",
+    "@astrojs/sitemap": "3.5.1",
+    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.1.10",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "astro": "5.13.6",
+    "lucide-react": "^0.519.0",
+    "mdast-util-to-string": "^4.0.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "reading-time": "^1.5.0",
+    "tailwindcss": "^4.1.10"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/chfritz/chfritz.github.io/issues"
-  },
-  "homepage": "https://github.com/chfritz/chfritz.github.io#readme"
+  "devDependencies": {
+    "baseline-browser-mapping": "^2.9.11"
+  }
 }

@@ -1,0 +1,26 @@
+---
+import type { Polymorphic } from 'astro/types';
+
+type LayoutTag = 'section' | 'div' | 'article' | 'header' | 'footer' | 'code';
+
+type Props<Tag extends LayoutTag> = Polymorphic<{
+  as: Tag;
+  class?: string;
+}>;
+
+const { as: Tag = 'div', class: className, title } = Astro.props as Props<LayoutTag>;
+---
+
+<Tag class:list={[
+  'max-w-[60rem] mx-auto px-4',
+  className,
+]}>
+  <div class="flex flex-col gap-6">
+    <div class="flex items-center">
+      <h1 class="font-semibold text-headings" style={{fontSize: '1.4rem'}}>{title}</h1>
+    </div>
+    <div class="">
+      <slot />
+    </div>
+  </div>
+</Tag>
