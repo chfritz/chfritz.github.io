@@ -16,7 +16,7 @@
     "@tailwindcss/vite": "^4.1.10",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
-    "astro": "5.13.6",
+    "astro": "^5.16.6",
     "lucide-react": "^0.519.0",
     "mdast-util-to-string": "^4.0.0",
     "react": "^19.1.1",
