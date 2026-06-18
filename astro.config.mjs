@@ -1,16 +1,16 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from "astro/config";
 import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-import { remarkReadingTime } from './src/lib/remark.mjs';
+// import { remarkReadingTime } from './src/lib/remark.mjs';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://chfritz.github.io',
   markdown: {
-    remarkPlugins: [remarkReadingTime],
+    // remarkPlugins: [remarkReadingTime],
     shikiConfig: {
       theme: 'gruvbox-dark-medium',
     },
@@ -26,12 +26,13 @@ export default defineConfig({
       syntaxHighlight: 'shiki',
     }),
   ],
-  experimental: {
-    fonts: [
-      {
-        name: 'Inter',
-        cssVariable: '--font-inter',
-        provider: 'local',
+  fonts: [
+    {
+      name: 'Inter',
+      cssVariable: '--font-inter',
+      // provider: 'local',
+      provider: fontProviders.local(),
+      options: {
         variants: [
           {
             src: ['./src/assets/fonts/Inter-Regular.woff2'],
@@ -59,19 +60,21 @@ export default defineConfig({
             weight: 800,
           },
         ],
-      },
-      {
-        name: 'InterVariable',
-        cssVariable: '--font-inter-variable',
-        provider: 'local',
+      }
+    },
+    {
+      name: 'InterVariable',
+      cssVariable: '--font-inter-variable',
+      // provider: 'local',
+      provider: fontProviders.local(),
+      options: {
         variants: [
           {
             src: ['./src/assets/fonts/InterVariable.woff2'],
             style: 'normal',
             weight: 'variable',
           },
-        ],
-      },
-    ],
-  },
+        ]}
+    },
+  ],
 });
